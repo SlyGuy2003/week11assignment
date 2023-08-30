@@ -1,0 +1,56 @@
+
+
+.board {
+	width: 500px;
+	height: 500px;
+	display: grid;
+    grid-template-columns: repeat(3, auto)
+}
+.cell {
+	width: 150px;
+	height: 150px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 200px;
+	cursor: pointer;
+}
+/* remove border for edges */
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+	border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+	border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+	border-bottom: none;
+}
+.textBox {      
+	background-color: blue;
+    text-align: center;
+	color: white;
+	font-size: 60px;
+	font-family: 'Courier New', Courier, monospace;
+	flex-direction: column;
+}
+.textBox button {
+	border-radius: 10px;
+	font-size: 3rem;
+	background-color: white;
+	border: 1px solid blue;
+	padding: 10px, 15px;
+	cursor: pointer;
+}
+
+.textBox button:hover {
+	background-color: blue;
+	color: white;
+	border-color: white;
+}
